@@ -1,6 +1,6 @@
 package com.app.todo.client.domain;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 import java.util.UUID;
 
 import lombok.Data;
@@ -10,12 +10,12 @@ public class ToDo {
 
 	private String id;
 	private String description;
-	private Date created;
-	private Date modified;
+	private LocalDateTime created;
+	private LocalDateTime modified;
 	private boolean completed;
 
 	public ToDo() {
-		Date date = new Date();
+		LocalDateTime date = LocalDateTime.now();
 		this.id = UUID.randomUUID().toString();
 		this.created = date;
 		this.modified = date;

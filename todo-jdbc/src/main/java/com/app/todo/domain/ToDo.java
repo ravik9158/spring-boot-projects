@@ -10,7 +10,6 @@ import lombok.Data;
 
 @Data
 public class ToDo {
-
 	@NotNull
 	private String id;
 	@NotNull
