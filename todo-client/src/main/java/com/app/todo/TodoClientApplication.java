@@ -31,20 +31,20 @@ public class TodoClientApplication {
 			assert newToDo != null;
 			log.info(newToDo.toString());
 			
-			Iterable<ToDo> toDos = client.findAll();
-			assert toDos != null;
-			toDos.forEach(toDo -> log.info(toDo.toString()));
+//			Iterable<ToDo> toDos = client.findAll();
+//			assert toDos != null;
+//			toDos.forEach(toDo -> log.info(toDo.toString()));
 			
 			ToDo toDo = client.findById(newToDo.getId());
-			assert toDos != null;
+			assert toDo != null;
 			log.info(toDo.toString());
 			
 //			ToDo completed = client.setCompleted(newToDo.getId());
 //			assert completed.isCompleted();
 //			log.info(completed.toString());
 			
-			client.delete(newToDo.getId());
-			assert client.findById(newToDo.getId()) == null;
+//			client.delete(newToDo.getId());
+//			assert client.findById(newToDo.getId()) == null;
 		};
 	}
 
